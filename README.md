@@ -47,32 +47,41 @@ All models were tested under both supervised and self-training settings to evalu
 
 
 
-## Research Focus
-We focus on classifying five Arabic dialects from the **MADAR dataset** using three main experiments:
-1. **Real Data + SSL**: Evaluate the performance of SSL with only real data.
-2. **Real + Synthetic Data + SSL**: Combine real data with LLM-generated synthetic data in SSL and test on real data.
-3. **Synthetic Data + SSL**: Test SSL using only synthetic data to assess its potential as a substitute for real data.
+## Results
 
-
-## Steps to run the code
-
-
-
-## Main Results
+The findings of our experiments are summarized as follows:
+- **Self-Training Performance**: Semi-supervised models trained with a mix of real and synthetic data significantly outperformed those trained on only 20% of the real data, showing the value of SSL in low-resource environments.
+- **Synthetic vs. Real Data**: Models trained solely on synthetic data performed within 5.3% of supervised models trained on 20% real data, indicating that synthetic data can be an effective substitute when real data is limited.
+- **Dialect-Specific Observations**: Egyptian dialect achieved the highest accuracy, while Gulf dialect presented the most challenges across all model
 
 <img src="https://github.com/user-attachments/assets/953ed38a-3d7b-4446-a51f-b1a41eca05f4" alt="dialects_difff" width="500">
-
 
 Figure 2. Comparison of Real and Generated Datasets Across Dialects by Training Method and Metric: Each graph illustrates Precision,
 Recall, or F1-Score for 100% Supervised, 20% Supervised, and Self-Training methods, highlighting performance differences of average
 linear classifiers between Real and Generated datasets across dialects
 
-### Takeaways
-1. **Precision**: Real data outperforms generated data in all settings, with smaller gaps in 20% Supervised and Self-Training.
-2. **Recall**: Generated data performs competitively, particularly in 20% Supervised and Self-Training.
-3. **F1-Score**: Generated data shows near-parity with real data in Self-Training, especially for Gulf and Levantine dialects.
-4. **Dialect-Specific**: Egyptian has the best performance, while Maghrebi consistently lags behind.
-5. **Overall**: Self-Training effectively bridges the gap between real and generated data.
+
+## Key Insights
+1. **Data Scarcity**: Leveraging SSL and synthetic data effectively mitigates the challenges of data scarcity, enabling improved model performance.
+2. **Model Performance**: Real data still outperforms generated data in all metrics, but generated data shows promise, especially when used with SSL.
+3. **Dialect Complexity**: Gulf dialect remains a challenging category, requiring more nuanced methods for accurate classification.
+
+## How to Run the Code
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/SondosBsharat/Arabic-Dialect-SemiSupervised-LLM-AI-Project.git
+   ```
+2. **Set Up the Environment**:
+   - Install dependencies using the `requirements.txt` file:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Data Preparation**:
+   - Prepare the datasets by following the instructions in `data_preparation.md`.
+   - Generate synthetic data using the provided notebook `data_generation.ipynb`.
+4. **Train and Evaluate Models**:
+   - Use `train_model.py` to train models and `evaluate.py` to assess their performance.
 
 
 
