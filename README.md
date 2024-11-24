@@ -78,7 +78,7 @@ linear classifiers between Real and Generated datasets across dialects
    pip install -r requirements.txt
    ```
 3. **Data Preparation**:
-   - Prepare the datasets by following the instructions in `data_preparation.md`.
+   - Prepare the datasets using the using the provided notebook `data_selection.ipynb`.
    - Generate synthetic data using the provided notebook `data_generation.ipynb`.
 4. **Train and Evaluate Models**:
    - Use `train_model.py` to train models and `evaluate.py` to assess their performance.
@@ -90,15 +90,12 @@ Future research directions include:
 - **Benchmark Development**: Creating more comprehensive benchmarks for Arabic dialect classification to evaluate the scalability of SSL with synthetic data.
 - **Increasing Synthetic Data Volume**: Generating larger synthetic datasets to assess improvements in model accuracy and generalization.
 
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
 ## Acknowledgments
 We extend our gratitude to Mohamed Bin Zayed University of Artificial Intelligence for supporting this research.
 
 ## Contact
 For questions or collaborations, please contact:
-- Sondos Bsharat:
+- Sondos Bsharat , Mariam Barakat ,Mena Attia :
 - GitHub Repository: [Arabic-Dialect-SemiSupervised-LLM-AI-Project](https://github.com/SondosBsharat/Arabic-Dialect-SemiSupervised-LLM-AI-Project)
 
 
